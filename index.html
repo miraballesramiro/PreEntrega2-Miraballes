@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Calculadora</title>
+</head>
+
+
+    <body>
+        <div class="container">
+            <div class="result">
+                <span>0</span>
+            </div>
+
+            <div class="buttons">
+                <button class="item item1 clear">AC</button>
+                <button class="item item1 negative">+/-</button>
+                <button class="item percent sign">%</button>
+                <button class="item item3 sign">/</button>
+                <button class="item numbers ">7</button>
+                <button class="item numbers">8</button>
+                <button class="item numbers">9</button>
+                <button class="item item3 sign">X</button>
+                <button class="item numbers">4</button>
+                <button class="item numbers">5</button>
+                <button class="item numbers">6</button>
+                <button class="item item3 sign">-</button>
+                <button class="item numbers">1</button>
+                <button class="item numbers">2</button>
+                <button class="item numbers">3</button>
+                <button class="item item3 sign">+</button>
+                <button class="item itemZero numbers">0</button>
+                <button class="item comma">,</button>
+                <button class="item item3 equal">=</button>
+            </div>
+        </div>
+
+        <script src="index.js">
+            <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+</head>
+
+<body>
+    <script>
+        function getNumber() {
+            return parseFloat(prompt("Ingrese un número:"));
+        }
+
+        // Funciones para realizar operaciones
+        function sumar(a, b) {
+            return a + b;
+        }
+
+        function restar(a, b) {
+            return a - b;
+        }
+
+        function multiplicar(a, b) {
+            return a * b;
+        }
+
+        function dividir(a, b) {
+            if (b !== 0) {
+                return a / b;
+            } else {
+                return "Error: No se puede dividir por cero.";
+            }
+        }
+
+        function calcularPorcentaje(numero, porcentaje) {
+            return (numero * porcentaje) / 100;
+        }
+
+        // Solicitar operación al usuario
+        const operacion = prompt("Ingrese la operación que desea realizar (+, -, *, /, %):");
+
+        switch (operacion) {
+            case "+":
+                const numero1 = getNumber();
+                const numero2 = getNumber();
+                const resultadoSuma = sumar(numero1, numero2);
+                alert(`El resultado de la suma es: ${resultadoSuma}`);
+                break;
+            case "-":
+                const minuendo = getNumber();
+                const sustraendo = getNumber();
+                const resultadoResta = restar(minuendo, sustraendo);
+                alert(`El resultado de la resta es: ${resultadoResta}`);
+                break;
+            case "*":
+                const factor1 = getNumber();
+                const factor2 = getNumber();
+                const resultadoMultiplicacion = multiplicar(factor1, factor2);
+                alert(`El resultado de la multiplicación es: ${resultadoMultiplicacion}`);
+                break;
+            case "/":
+                const dividendo = getNumber();
+                const divisor = getNumber();
+                const resultadoDivision = dividir(dividendo, divisor);
+                alert(resultadoDivision);
+                break;
+            case "%":
+                const numero = getNumber();
+                const porcentaje = getNumber();
+                const resultadoPorcentaje = calcularPorcentaje(numero, porcentaje);
+                alert(`El ${porcentaje}% de ${numero} es: ${resultadoPorcentaje}`);
+                break;
+            default:
+                alert("Operación no válida.");
+                break;
+        }
+    </script>
+</body>
+</html>
+
+        </script> 
+    </body>
+</html>
